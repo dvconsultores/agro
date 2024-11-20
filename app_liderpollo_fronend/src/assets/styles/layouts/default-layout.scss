@@ -1,0 +1,48 @@
+@use '@/assets/styles/main.scss' as *;
+//---------------------------------------------------------------------------------------------//
+//======================================== layout =============================================//
+//---------------------------------------------------------------------------------------------//
+
+#layout {
+  overflow: hidden;
+
+  //- responsive font size -//
+  & > * { font-size: var(--resizer) }
+
+  .v-main {
+    position: relative;
+
+    & > * {
+      @include media(max, small) { font-size: var(--resizer-mobile) }
+    }
+
+    $circle-size: 367px;
+    $distance: -250px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $distance;
+      right: $distance;
+      width: $circle-size;
+      height: $circle-size;
+      border-radius: 100%;
+      background-color: #FFDD00E0;
+      opacity: .66;
+      filter: blur(300px);
+    }
+  
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: $distance;
+      left: $distance;
+      width: $circle-size;
+      height: $circle-size;
+      border-radius: 100%;
+      background-color: #FF5100A8;
+      opacity: .66;
+      filter: blur(300px);
+    }
+  }
+}

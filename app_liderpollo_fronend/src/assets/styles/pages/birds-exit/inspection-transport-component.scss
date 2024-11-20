@@ -1,0 +1,13 @@
+@use "@/assets/styles/main.scss" as *;
+//---------------------------------------------------------------------------------------------//
+//========================================= inspection transport component ==============================================//
+//---------------------------------------------------------------------------------------------//
+
+#inspection-transport-component {
+  @extend .parent;
+  @extend .margin-global;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100dvh - var(--h-navbar) - 16px);
+}

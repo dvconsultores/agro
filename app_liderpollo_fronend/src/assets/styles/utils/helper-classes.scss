@@ -1,0 +1,128 @@
+@use "mixins.scss";
+@use "variables.scss" as vars;
+//---------------------------------------------------------------------------------------------//
+//====================================== helper classes =======================================//
+//---------------------------------------------------------------------------------------------//
+
+//*- parent -//
+.parent {
+  max-width: var(--parent) !important;
+  width: 100%;
+  margin-inline: auto;
+}
+
+//*- subparent -//
+.subparent {
+  max-width: var(--subparent) !important;
+  width: 100%;
+  margin-inline: auto;
+}
+
+//*- full-screen -//
+.full-screen {
+  width: 100vw !important;
+  margin-inline: calc(50% - 50vw);
+}
+
+//*- margin-global -//
+.margin-global {
+  padding-inline: var(--margin-global);
+}
+
+//*- hidden -//
+.hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+//*- hide spin -//
+.hide-spin {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  /* Firefox */
+  input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+}
+
+//*- pixel border -//
+.pixelBorder {
+  --c-size: 4.5px;
+  
+  padding: var(--c-size);
+  position: relative;
+  isolation: isolate;
+  clip-path: vars.$clip-path;
+  
+  &::before, &::after {
+    content: "" !important;
+    position: absolute !important;
+    opacity: 1 !important;
+    z-index: -1 !important;
+    clip-path: vars.$clip-path;
+    inset: 0;
+  }
+  
+  // border
+  &::before {
+    background-color: var(--accent) !important;
+  }
+  
+  // body
+  &::after {
+    inset: var(--c-size);
+    background-color: var(--bg);
+  }
+}
+
+//*- buttons -//
+button.btn, .v-btn.btn, .btn {
+  height: 44px;
+  border-radius: 8px !important;
+  box-shadow: var(--elevation-1), var(--elevation-2);
+
+  // margin
+  &, > .v-btn__content {
+    display: flex;
+    gap: var(--g);
+  }
+}
+
+//*- cards -//
+.card {
+  --w: initial;
+  --max-w: none;
+  --min-w: none;
+  --h: initial;
+  --max-h: none;
+  --min-h: none;
+  --bg: rgb(var(--v-theme-surface));
+  --c: rgb(var(--v-theme-foreground));
+  --b: initial;
+  --p: 1em;
+  --br: 30px;
+  --bs: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --f: initial;
+  --t: initial;
+
+  width: var(--w) !important;
+  max-width: var(--max-w) !important;
+  min-width: var(--min-w) !important;
+  height: var(--h) !important;
+  max-height: var(--max-h) !important;
+  min-height: var(--min-h) !important;
+  background: var(--bg) !important;
+  color: var(--c) !important;
+  box-shadow: var(--bs) !important;
+  border-radius: var(--br) !important;
+  padding: var(--p);
+  border: var(--b) !important;
+  transform: var(--t);
+  filter: var(--f);
+}

@@ -1,0 +1,21 @@
+@use "@/assets/styles/main.scss" as *;
+//---------------------------------------------------------------------------------------------//
+//========================================= kpi-fattening-birds-phase ==============================================//
+//---------------------------------------------------------------------------------------------//
+
+#kpi-fattening-birds-phase {
+  @extend .parent;
+  @extend .margin-global;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100dvh - var(--h-navbar) - 16px);
+
+  &-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    > * { flex: 1 1 328px }
+  }
+}

@@ -1,0 +1,47 @@
+name: Build Docker Container & Push to DO Registry
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CLUSTER_NAME: k8s-apolopay-1
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Insall doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DO_API_TOKEN_KEY }}
+      - name: Login to DO Container Registry with short-lived creds
+        run: doctl registry login --expiry-seconds 1200
+      - name: Build container image
+        working-directory: .
+        run: |
+          docker build -f Dockerfile \
+          --build-arg VITE_BASE_URL=${{ secrets.VITE_BASE_URL }} \
+          --build-arg VITE_API_URL=${{ secrets.VITE_API_URL }} \
+          --build-arg VITE_SECURE_STORAGE_NAME_SPACE=${{ secrets.VITE_SECURE_STORAGE_NAME_SPACE }} \
+          --build-arg VITE_SECURE_STORAGE_KEY=${{ secrets.VITE_SECURE_STORAGE_KEY }} \
+          -t registry.digitalocean.com/apoloservices/web-app:latest \
+          -t registry.digitalocean.com/apoloservices/web-app:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
+            .
+      - name: Push image
+        run: |
+          docker push registry.digitalocean.com/apoloservices/web-app --all-tags
+      - name: K8s cluster kubeconfig file with/ short-lived creds
+        run: |
+          doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ env.CLUSTER_NAME }}
+      - name: Update Deployment image
+        run: |
+          kubectl set image deployment/web-app-deployment web-app=registry.digitalocean.com/apoloservices/web-app:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
+      - name: Wait for rollout to finish
+        run: |
+          kubectl rollout status deployment/web-app-deployment

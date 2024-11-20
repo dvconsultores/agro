@@ -1,0 +1,29 @@
+@use "@/assets/styles/main" as *;
+//---------------------------------------------------------------------------------------------//
+//======================================== login ==============================================//
+//---------------------------------------------------------------------------------------------//
+
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(612px, 100%);
+  margin-inline: auto;
+  min-height: 100dvh;
+  @include media(max, small) {
+    padding-inline: var(--margin-global);
+  }
+
+  form {
+    width: min(470px, 100%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  a, label {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 1;
+  }
+}
