@@ -124,7 +124,7 @@ import { useRouter } from 'vue-router';
 import { useToast } from "vue-toastification";
 import { useStorage } from 'vue3-storage-secure';
 import VOtpInput from "vue3-otp-input";
-import ApiLiderPollo from '@/repository/api-sap-avicola/';
+import ApiLiderPollo from '@/repository/api-lider-pollo/';
 
 const
 otpInput = ref(''),

@@ -46,7 +46,7 @@
             v-if="!item.children"
             min-height="36"
             class="text-white px-4"
-            :class="{ 'bg-primary': route.name.includes(item.to) }"
+            :class="{ 'bg-primary-lighten': route.name.includes(item.to) }"
             @click="item.onClick ? item.onClick() : router.push({ name: item.to })"
           >
             <img :src="item.icon" :alt="`${item.name} icon`" class="mr-2" style="width: 20px;" >
@@ -569,7 +569,7 @@ async function getRolUser() {
 @use "@/assets/styles/utils/variables.scss" as vars;
 
 #drawer {
-  background: vars.$primary-lighten !important;
+  background: vars.$primary !important;
 
   .v-navigation-drawer__content {
     display: flex;

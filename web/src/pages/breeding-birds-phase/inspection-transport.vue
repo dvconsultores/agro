@@ -37,7 +37,7 @@ import moment from 'moment';
 import ApiLiderPollo from '@/repository/api-lider-pollo'
 import { onBeforeMount, ref, watch } from 'vue';
 import { useToast } from "vue-toastification";
-import { EtapaGranjaEnum } from '@/repository/api-sap-avicola/enums';
+import { EtapaGranjaEnum } from '@/repository/api-lider-pollo/enums';
 import InspectionTransport from '@/components/birds-exit/inspection-transport.vue';
 
 

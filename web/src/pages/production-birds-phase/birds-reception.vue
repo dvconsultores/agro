@@ -248,7 +248,7 @@ import '@/assets/styles/pages/reproduction-breeding-phase/birds-reception.scss'
 import ApiLiderPollo from '@/repository/api-lider-pollo'
 import { onBeforeMount, ref, watch } from 'vue';
 import { useToast } from "vue-toastification";
-import { EtapaGranjaEnum } from '../../repository/api-sap-avicola/enums';
+import { EtapaGranjaEnum } from '../../repository/api-lider-pollo/enums';
 import { filteringInputformatter } from '@/plugins/functions';
 
 

@@ -331,7 +331,7 @@ import moment from 'moment';
 import ApiLiderPollo from '@/repository/api-lider-pollo'
 import { defineProps, onBeforeMount, ref, watch } from 'vue';
 import { useToast } from "vue-toastification";
-import { EtapaGranjaEnum } from '@/repository/api-sap-avicola/enums';
+import { EtapaGranjaEnum } from '@/repository/api-lider-pollo/enums';
 
 const props = defineProps({
   etapa: {

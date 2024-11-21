@@ -50,7 +50,7 @@ import moment from 'moment';
 import ApiLiderPollo from '@/repository/api-lider-pollo'
 import { onBeforeMount, ref, watch } from 'vue';
 import { useToast } from "vue-toastification";
-import { EtapaGranjaEnum } from '@/repository/api-sap-avicola/enums';
+import { EtapaGranjaEnum } from '@/repository/api-lider-pollo/enums';
 import FoodRecords from '@/components/process-birds/food-records.vue';
 import WeightRecords from '@/components/process-birds/weight-records.vue';
 import MortalityRecords from '@/components/process-birds/mortality-records.vue';
