@@ -233,19 +233,19 @@ quickAccess = [
   {
     icon: syringeIcon,
     name: "KPI - Reproductora Etapa Cría",
-    color: "rgb(var(--v-theme-tertiary))",
+    color: "rgb(var(--v-theme-accent-variant))",
     action: () => router.push({ name: "KpiBreedingBirdsPhase" }),
   },
   {
     icon: agricultureIcon,
     name: "KPI -Reproductora Etapa Producción",
-    color: "rgb(var(--v-theme-tertiary-darken))",
+    color: "rgb(var(--v-theme-tertiary))",
     action: () => router.push({ name: "KpiProductionBirdsPhase" }),
   },
   {
     icon: eggIcon,
     name: "KPI - Incubadora",
-    color: "rgb(var(--v-theme-secondary-lighten))",
+    color: "rgb(var(--v-theme-secondary))",
     action: () => router.push({ name: "KpiIncubator" }),
   },
   {
