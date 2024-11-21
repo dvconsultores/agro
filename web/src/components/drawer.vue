@@ -16,7 +16,7 @@
 
 
       <div class="flex-acenter mb-8 px-3 py-2 text-white relative" style="height: 40px;">
-        <v-avatar image="@/assets/sources/logos/sap_avicola_variant.png" alt="logo" style="position: absolute;" />
+        <v-avatar image="@/assets/sources/logos/sap_avicola_variant.png" alt="logo" style="position: absolute;" rounded="0" />
 
         <h6 class="mb-0 flex-grow-1 text-center" style="--fs: 14px;">{{ APP_NAMES.capitalize }}</h6>
       </div>
