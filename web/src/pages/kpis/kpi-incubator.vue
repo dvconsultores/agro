@@ -27,7 +27,7 @@
 <script setup>
 import '@/assets/styles/pages/kpis/kpi-incubator.scss'
 import KpisList from '@/components/kpis-list.vue'
-import ApiLiderPollo from '@/repository/api-sap-avicola'
+import ApiLiderPollo from '@/repository/api-lider-pollo'
 import { onBeforeMount, ref, watch } from 'vue';
 import { useToast } from "vue-toastification";
 

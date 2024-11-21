@@ -3,7 +3,7 @@ import router from "@/router"
 import { useStorage } from "vue3-storage-secure"
 import { storageSecureCollection } from "@/plugins/vue3-storage-secure"
 import { jwtDecode } from 'jwt-decode';
-import ApiLiderPollo from '@/repository/api-sap-avicola';
+import ApiLiderPollo from '@/repository/api-lider-pollo';
 
 
 class AuthApi {

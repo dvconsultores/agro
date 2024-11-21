@@ -197,7 +197,7 @@ import '@/assets/styles/pages/create-roles.scss'
 import { phoneState } from '@/models/phone-state-model';
 import { userState } from '@/models/user-state-model';
 import { ref, onBeforeMount, watch } from 'vue'
-import ApiLiderPollo from '@/repository/api-sap-avicola';
+import ApiLiderPollo from '@/repository/api-lider-pollo';
 import variables from '@/mixins/variables';
 import { useToast } from "vue-toastification";
 

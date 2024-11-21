@@ -18,7 +18,7 @@
       <div class="flex-acenter mb-8 px-3 py-2 text-white relative" style="height: 40px;">
         <v-avatar image="@/assets/sources/logos/sap_avicola_variant.png" alt="logo" style="position: absolute;" />
 
-        <h6 class="mb-0 flex-grow-1 text-center" style="--fs: 14px;">líder Pollo</h6>
+        <h6 class="mb-0 flex-grow-1 text-center" style="--fs: 14px;">{{ APP_NAMES.capitalize }}</h6>
       </div>
 
       <!--<v-text-field
@@ -126,9 +126,9 @@ import incubatorEggIcon from '@/assets/sources/drawer/incubator_egg.svg'
 import editSquareIcon from '@/assets/sources/drawer/edit_square.svg'
 import babyChickIcon from '@/assets/sources/drawer/baby_chick.svg'
 import { useStorage } from 'vue3-storage-secure';
-import ApiLiderPollo from '@/repository/api-sap-avicola';
+import ApiLiderPollo from '@/repository/api-lider-pollo';
 import { useToast } from "vue-toastification";
-
+import { APP_NAMES } from "@/plugins/dictionary.js";
 
 const
   router = useRouter(),

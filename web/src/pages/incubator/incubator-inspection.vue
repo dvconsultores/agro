@@ -253,7 +253,7 @@
 
 <script setup>
 import '@/assets/styles/pages/reproduction-breeding-phase/farm-inspection.scss'
-import ApiLiderPollo from '@/repository/api-sap-avicola'
+import ApiLiderPollo from '@/repository/api-lider-pollo'
 import { onBeforeMount, ref, watch } from 'vue';
 import { useToast } from "vue-toastification";
 import { EtapaGranjaEnum } from '../../repository/api-sap-avicola/enums';

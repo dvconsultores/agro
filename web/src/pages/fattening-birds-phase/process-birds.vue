@@ -47,7 +47,7 @@
 import '@/assets/styles/pages/process-birds/process-birds.scss'
 import { filteringInputformatter } from '@/plugins/functions';
 import moment from 'moment';
-import ApiLiderPollo from '@/repository/api-sap-avicola'
+import ApiLiderPollo from '@/repository/api-lider-pollo'
 import { onBeforeMount, ref, watch } from 'vue';
 import { useToast } from "vue-toastification";
 import { EtapaGranjaEnum } from '@/repository/api-sap-avicola/enums';

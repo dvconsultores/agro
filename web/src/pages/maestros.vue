@@ -273,7 +273,7 @@
 import '@/assets/styles/pages/maestros.scss'
 import { onBeforeMount, ref, watch } from 'vue';
 import { useToast } from "vue-toastification";
-import ApiLiderPollo from '@/repository/api-sap-avicola'
+import ApiLiderPollo from '@/repository/api-lider-pollo'
 import variables from '@/mixins/variables';
 
 

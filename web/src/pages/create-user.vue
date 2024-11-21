@@ -259,7 +259,7 @@
 import '@/assets/styles/pages/create-user.scss'
 import { phoneState } from '@/models/phone-state-model';
 import { userState } from '@/models/user-state-model';
-import ApiLiderPollo from '@/repository/api-sap-avicola';
+import ApiLiderPollo from '@/repository/api-lider-pollo';
 import { onBeforeMount, ref, watch } from 'vue';
 import variables from '@/mixins/variables';
 import { useToast } from "vue-toastification";

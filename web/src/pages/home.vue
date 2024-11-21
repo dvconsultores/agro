@@ -177,7 +177,7 @@ import henIcon from '@/assets/sources/icons/hen.svg'
 import syringeIcon from '@/assets/sources/icons/syringe.svg'
 import assetsIcons from '@/assets/sources/icons/';
 import Iconss from '@/assets/sources/icons/'
-import ApiLiderPollo from '@/repository/api-sap-avicola'
+import ApiLiderPollo from '@/repository/api-lider-pollo'
 import { onBeforeMount, ref } from 'vue';
 import { useToast } from "vue-toastification";
 import AuthApi from '@/repository/auth_api'

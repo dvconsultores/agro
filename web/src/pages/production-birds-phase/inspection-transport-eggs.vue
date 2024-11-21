@@ -328,7 +328,7 @@
 import '@/assets/styles/pages/reproduction-breeding-phase/inspection-transport-eggs.scss'
 import { filteringInputformatter } from '@/plugins/functions';
 import moment from 'moment';
-import ApiLiderPollo from '@/repository/api-sap-avicola'
+import ApiLiderPollo from '@/repository/api-lider-pollo'
 import { onBeforeMount, ref, watch } from 'vue';
 import { useToast } from "vue-toastification";
 
