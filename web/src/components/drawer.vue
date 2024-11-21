@@ -84,7 +84,7 @@
     </section>
 
     <v-divider thickness="2" class="text-white mt-auto mb-6" />
-    <v-card class="d-flex align-center bg-primary-variant px-3 py-2" style="gap: 10px;">
+    <v-card class="d-flex align-center bg-primary-lighten px-3 py-2" style="gap: 10px;">
       <v-img-load
         :src="avatar"
         sizes="36"
