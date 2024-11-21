@@ -1,6 +1,7 @@
 // styles
 import '@/assets/styles/settings.scss'
 import '@/assets/styles/main.scss'
+import '@/assets/fonts/SAP-icons.ttf';
 
 // Components
 import App from './app.vue'

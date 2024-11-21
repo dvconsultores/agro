@@ -75,7 +75,8 @@
           :style="`border-top: 8px solid ${item.color}; gap: 10px;`"
           @click="item.action"
         >
-          <img :src="item.icon" alt="ref icon">
+          <i v-if="item.icon" v-html="item.icon" class="sap-icon" style="font-size: 20px;" />
+          <img v-else-if="item.img" :src="item.img" alt="ref icon">
 
           <h6 class="mb-0 w700 text-center" style="--fs: 12px">{{ item.name }}</h6>
         </v-card>
@@ -231,25 +232,25 @@ indicatorsEngorde = ref([]),
 ],*/
 quickAccess = [
   {
-    icon: syringeIcon,
+    icon: "&#xe138;",
     name: "KPI - Reproductora Etapa Cría",
     color: "rgb(var(--v-theme-accent-variant))",
     action: () => router.push({ name: "KpiBreedingBirdsPhase" }),
   },
   {
-    icon: agricultureIcon,
+    img: agricultureIcon,
     name: "KPI -Reproductora Etapa Producción",
     color: "rgb(var(--v-theme-tertiary))",
     action: () => router.push({ name: "KpiProductionBirdsPhase" }),
   },
   {
-    icon: eggIcon,
+    img: eggIcon,
     name: "KPI - Incubadora",
     color: "rgb(var(--v-theme-secondary))",
     action: () => router.push({ name: "KpiIncubator" }),
   },
   {
-    icon: henIcon,
+    img: henIcon,
     name: "KPI - Pollo de Engorde",
     color: "rgb(var(--v-theme-primary))",
     action: () => router.push({ name: "KpiFatteningBirdsPhase" }),

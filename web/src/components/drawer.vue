@@ -49,7 +49,8 @@
             :class="{ 'bg-primary-lighten': route.name.includes(item.to) }"
             @click="item.onClick ? item.onClick() : router.push({ name: item.to })"
           >
-            <img :src="item.icon" :alt="`${item.name} icon`" class="mr-2" style="width: 20px;" >
+            <i v-if="item.icon" v-html="item.icon" class="sap-icon mr-2" style="font-size: 20px;" />
+            <img v-else-if="item.img" :src="item.img" :alt="`${item.name} icon`" class="mr-2" style="width: 20px;" >
             {{ item.name }}
           </v-list-item>
 
@@ -60,7 +61,8 @@
           >
             <v-expansion-panel class="pa-0 text-white">
               <template #title>
-                <img :src="item.icon" :alt="`${item.name} icon`" class="mr-2" style="width: 20px;" >
+                <i v-if="item.icon" v-html="item.icon" class="sap-icon mr-2" style="font-size: 20px;" />
+                <img v-else-if="item.img" :src="item.img" :alt="`${item.name} icon`" class="mr-2" style="width: 20px;" >
                 {{ item.name }}
               </template>
 
@@ -72,7 +74,8 @@
                   :class="{ 'bg-primary': route.name.includes(children.to) }"
                   @click="children.onClick ? children.onClick() : router.push({ name: children.to })"
                 >
-                  <img :src="children.icon" :alt="`${children.name} icon`" class="mr-2" style="width: 20px;" >
+                  <i v-if="children.icon" v-html="children.icon" class="sap-icon mr-2" style="font-size: 20px;" />
+                  <img v-else-if="children.img" :src="children.img" :alt="`${children.name} icon`" class="mr-2" style="width: 20px;" >
                   {{ children.name }}
                 </v-list-item>
               </template>
@@ -161,7 +164,7 @@ async function getRolUser() {
         isActive: true,
         children: [
           {
-            icon: homeIcon,
+            icon: "&#xe070;",
             name: "Panel Principal",
             to: "Home",
             isActive: true,
@@ -173,36 +176,36 @@ async function getRolUser() {
         isActive: false,
         children: [
           {
-            icon: listAltIcon,
+            icon: "&#xe118;",
             name: "Etapa Cría",
             isActive: false,
             children: [
               {
-                icon: houseSidingIcon,
+                img: houseSidingIcon,
                 name: "Inspección de Granja",
                 to: "FarmInspectionBreeding",
                 isActive: false,
               },
               {
-                icon: localShippingIcon,
+                icon: "&#xe0b3;",
                 name: "Distribución de Aves",
                 to: "BreedingReception",
                 isActive: false,
               },
               {
-                icon: syringeIcon,
+                icon: "&#xe138;",
                 name: "Proceso de Cría",
                 to: "ProcessBreedingBirds",
                 isActive: false,
               },
               {
-                icon: henIcon,
+                img: henIcon,
                 name: "Salida de Aves",
                 to: "ExitBreedingBirds",
                 isActive: false,
               },
               {
-                icon: palletIcon,
+                img: palletIcon,
                 name: "Insp. de Transporte",
                 to: "InspectionTransportBreeding",
                 isActive: false,
@@ -210,48 +213,48 @@ async function getRolUser() {
             ]
           },
           {
-            icon: listAltIcon,
+            icon: "&#xe118;",
             name: "Etapa Producción",
             isActive: false,
             children: [
               {
-                icon: houseSidingIcon,
+                img: houseSidingIcon,
                 name: "Inspección de Granja",
                 to: "FarmInspectionProduction",
                 isActive: false,
               },
               {
-                icon: localShippingIcon,
+                icon: "&#xe0b3;",
                 name: "Distribución de Aves",
                 to: "ProductionReception",
                 isActive: false,
               },
               {
-                icon: syringeIcon,
+                icon: "&#xe138;",
                 name: "Proceso Producción",
                 to: "ProcessProductionBirds",
                 isActive: false,
               },
               {
-                icon: henIcon,
+                img: henIcon,
                 name: "Salidas de Aves",
                 to: "ExitProductionBirds",
                 isActive: false,
               },
               {
-                icon: palletIcon,
+                img: palletIcon,
                 name: "Insp. de Transporte",
                 to: "InspectionTransportProduction",
                 isActive: false,
               },
               {
-                icon: eggIcon,
+                img: eggIcon,
                 name: "Salidas de huevos",
                 to: "ExitProductionEggs",
                 isActive: false,
               },
               {
-                icon: palletIcon,
+                img: palletIcon,
                 name: "Insp. Transporte huevos",
                 to: "InspectionTransportProductionEggs",
                 isActive: false,
@@ -259,42 +262,42 @@ async function getRolUser() {
             ]
           },
           {
-            icon: listAltIcon,
+            icon: "&#xe118;",
             name: "Incubadora",
             isActive: false,
             children: [
             {
-                icon: houseSidingIcon,
+                img: houseSidingIcon,
                 name: "Inspecciones incubadora",
                 to: "IncubatorInspection",
                 isActive: false,
               },
               {
-                icon: localShippingIcon,
+                icon: "&#xe0b3;",
                 name: "Recepciones huevos",
                 to: "EggsReception",
                 isActive: false,
               },
               {
-                icon: eggsIcon,
+                img: eggsIcon,
                 name: "Clasificaciones huevos",
                 to: "EggsClassification",
                 isActive: false,
               },
               {
-                icon: incubatorEggIcon,
+                img: incubatorEggIcon,
                 name: "Incubaciones",
                 to: "EggsIncubation",
                 isActive: false,
               },
               {
-                icon: editSquareIcon,
+                img: editSquareIcon,
                 name: "Registros de nacimientos",
                 to: "BirthRegistration",
                 isActive: false,
               },
               {
-                icon: babyChickIcon,
+                img: babyChickIcon,
                 name: "Salidas de pollitos BB",
                 to: "ChicksExit",
                 isActive: false,
@@ -302,35 +305,35 @@ async function getRolUser() {
             ]
           },
           {
-            icon: listAltIcon,
+            icon: "&#xe118;",
             name: "Etapa Engorde",
             children: [
               {
-                icon: houseSidingIcon,
+                img: houseSidingIcon,
                 name: "Inspección de Granja",
                 to: "FarmInspectionFattening",
                 isActive: false,
               },
               {
-                icon: localShippingIcon,
+                icon: "&#xe0b3;",
                 name: "Distribución de Aves",
                 to: "FatteningReception",
                 isActive: false,
               },
               {
-                icon: syringeIcon,
+                icon: "&#xe138;",
                 name: "Proceso Producción",
                 to: "ProcessFatteningBirds",
                 isActive: false,
               },
               {
-                icon: henIcon,
+                img: henIcon,
                 name: "Salida de Aves",
                 to: "ExitFatteningBirds",
                 isActive: false,
               },
               {
-                icon: palletIcon,
+                img: palletIcon,
                 name: "Insp. de Transporte",
                 to: "InspectionTransportFattening",
                 isActive: false,
@@ -338,30 +341,30 @@ async function getRolUser() {
             ]
           },
           {
-            icon: listAltIcon,
+            icon: "&#xe118;",
             name: "KPI - Indicadores",
             isActive: false,
             children: [
               {
-                icon: syringeIcon,
+                icon: "&#xe138;",
                 name: "Reproductora Etapa de Cría",
                 to: "KpiBreedingBirdsPhase",
                 isActive: false,
               },
               {
-                icon: agricultureIcon,
+                img: agricultureIcon,
                 name: "Reproductora Etapa Producción",
                 to: "KpiProductionBirdsPhase",
                 isActive: false,
               },
               {
-                icon: eggIcon,
+                img: eggIcon,
                 name: "Incubadora",
                 to: "KpiIncubator",
                 isActive: false,
               },
               {
-                icon: henIcon,
+                img: henIcon,
                 name: "Proceso de Engorde",
                 to: "KpiFatteningBirdsPhase",
                 isActive: false,
@@ -375,30 +378,30 @@ async function getRolUser() {
         isActive: false,
         children: [
           /*{
-            icon: contractIcon,
+            img: contractIcon,
             name: "Visualizar",
             to: "Visualize",
           },*/
           {
-            icon: editDocumentIcon,
+            icon: "&#xe23c;",
             name: "Maestros",
             to: "Maestros",
             isActive: false,
           },
           {
-            icon: supervisorAccountIcon,
+            icon: "&#xe05d;",
             name: "Usuarios",
             to: "Users",
             isActive: false,
           },
           {
-            icon: manufacturingIcon,
+            icon: "&#xe00c;",
             name: "Roles",
             to: "CreateRoles",
             isActive: false,
           },
           /*{
-            icon: manufacturingIcon,
+            img: manufacturingIcon,
             name: "Configuración",
           },*/
         ],
@@ -408,7 +411,7 @@ async function getRolUser() {
         isActive: true,
         children: [
           {
-            icon: logoutIcon,
+            icon: "&#xe005;",
             name: "Cerrar Sesión",
             onClick: AuthApi.logOut,
             isActive: true,

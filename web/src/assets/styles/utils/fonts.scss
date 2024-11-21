@@ -1,64 +1,82 @@
 //======= 72Font =======//
 @font-face {
-  font-family: '72Font';
-  src: url(/fonts/72Font-Light.ttf) format('truetype');
+  font-family: "72Font";
+  src: url(@/assets/fonts/72Font-Light.ttf) format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: '72Font';
-  src: url(/fonts/72Font-Regular.ttf) format('truetype');
+  font-family: "72Font";
+  src: url(@/assets/fonts/72Font-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: '72Font';
-  src: url(/fonts/72Font-Italic.ttf) format('truetype');
+  font-family: "72Font";
+  src: url(@/assets/fonts/72Font-Italic.ttf) format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: '72Font';
-  src: url(/fonts/72Font-SemiBold.ttf) format('truetype');
+  font-family: "72Font";
+  src: url(@/assets/fonts/72Font-SemiBold.ttf) format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: '72Font';
-  src: url(/fonts/72Font-SemiBoldDuplex.ttf) format('truetype');
+  font-family: "72Font";
+  src: url(@/assets/fonts/72Font-SemiBoldDuplex.ttf) format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: '72Font';
-  src: url(/fonts/72Font-Bold.ttf) format('truetype');
+  font-family: "72Font";
+  src: url(@/assets/fonts/72Font-Bold.ttf) format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: '72Font';
-  src: url(/fonts/72Font-BoldItalic.ttf) format('truetype');
+  font-family: "72Font";
+  src: url(@/assets/fonts/72Font-BoldItalic.ttf) format("truetype");
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
-  font-family: '72Font';
-  src: url(/fonts/72Font-Black.ttf) format('truetype');
+  font-family: "72Font";
+  src: url(@/assets/fonts/72Font-Black.ttf) format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
-
 //======= 72FontCondensed =======//
 @font-face {
-  font-family: '72FontCondensed';
-  src: url(/fonts/72Font-Condensed.ttf) format('truetype');
+  font-family: "72FontCondensed";
+  src: url(@/assets/fonts/72Font-Condensed.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: '72FontCondensed';
-  src: url(/fonts/72Font-CondensedBold.ttf) format('truetype');
+  font-family: "72FontCondensed";
+  src: url(@/assets/fonts/72Font-CondensedBold.ttf) format("truetype");
   font-weight: 800;
   font-style: normal;
+}
+
+//======= SAPIcons =======//
+@font-face {
+  font-family: "SAPIcons";
+  src: url("@/assets/fonts/sap-icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.sap-icon {
+  font-family: "SAPIcons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
